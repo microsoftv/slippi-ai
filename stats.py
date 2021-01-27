@@ -19,6 +19,11 @@ def get_fox_ditto_names():
   table = table[table.css_character_1 == melee.Character.FOX.value]
   return table.filename
 
+def get_falcon_vs_all_names():
+  table = TABLE
+  table = table[table.css_character_0 == melee.Character.CPTFALCON.value]
+  return table.filename
+
 BAD_NAMES = set([
     # filtered by Gurvan
     '20200212 - HNC 15 - PM 1035 - Fox (Green) vs Marth (Green) - Fountain of Dreams.slp',
@@ -36,6 +41,7 @@ BAD_NAMES = set([
 
 SUBSETS = {
   "fox_dittos": get_fox_ditto_names,
+  "falcon_vs_all": get_falcon_vs_all_names,
   "all": get_all_names,
 }
 
